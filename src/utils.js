@@ -3,26 +3,26 @@ const jwt = require('jsonwebtoken')
 const APP_SECRET = 'a-GraphQL-prim3r'
 
 function getTokenPayload(token) {
-    return jwt.verify(token, APP_SECRET);
+    return jwt.verify(token, APP_SECRET)
   }
   
   function getUserId(req, authToken) {
     if(req) {
       const authHeader = req.headers.authorization;
       if (authHeader) {
-        const token = authHeader.replace('Bearer ', '');
+        const token = authHeader.replace('Bearer ', '')
         if(!token) {
           throw new Error('No token found');
         }
-        const { userId } = getTokenPayload(token);
+        const { userId } = getTokenPayload(token)
         return userId;
       }
     } else if(authToken) {
-      const { userId } = getTokenPayload(authToken);
+      const { userId } = getTokenPayload(authToken)
       return userId;
     }
   
-    throw new Error('Not authenticated');
+    throw new Error('Not authenticated')
   }
   
   module.exports = {
