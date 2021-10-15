@@ -8,7 +8,7 @@ async function signup(parent, args, context, info) {
       data: { ...args, password }
     });
   
-    const token = jwt.sign({ userId: user.id }, APP_SECRET);
+    const token = jwt.sign({ userId: user.id }, APP_SECRET)
   
     return {
       token,
@@ -50,6 +50,7 @@ async function post(parent, args, context, info) {
           postedBy: { connect: { id: userId } }
         }
       })
+      context.pubsub.publish("NEW_LINK", newLink)
 
       return newLink
   }
