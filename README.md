@@ -1,7 +1,6 @@
 ## GraphQL Server
 
-Basic GraphQL Node server that uses Prisma and SQLite to persist data of incoming GraphQL mutations. You build a Hacker News
-clone which is fairly easy to model but gives you all the fundamentals to easily build upon.
+Basic GraphQL Node server that uses Prisma and SQLite to persist data of incoming GraphQL mutations. You build the backend of a Hacker News clone which is fairly easy to model yet gives you all the fundamentals to easily build upon.
 
 ### Clone & Start
 
@@ -73,5 +72,5 @@ Easily build upon these:
 
 ### Credits
 
- The inspiration for this quick, fun project was the need to revise GraphQL with all the fundamentals needed to build real world applications. Thanks to [How to GraphQL](https://www.howtographql.com/), these tutorials are better than most books
+ The inspiration for this quick, fun project was the need to revise GraphQL with all the fundamentals needed to build real world applications. Thanks to [How to GraphQL](https://www.howtographql.com/), their approach is better than most books
  or blog posts you'll read on the subject.
