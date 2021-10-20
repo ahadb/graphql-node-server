@@ -20,6 +20,7 @@ async function feed(parent, args, context, info) {
         where,
         skip: args.skip,
         take: args.take,
+        orderBy: args.orderBy
       })
   
     return links
